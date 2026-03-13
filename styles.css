@@ -1,0 +1,160 @@
+styles.css* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* Uses the Google Font */
+  line-height: 1.6;
+  color: #333; /* Dark text for readability */
+  background-color: #f9f9f9; /* Light background */
+}.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Adds side padding on small screens */
+}
+
+header {
+  background: #222; /* Dark background */
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100; /* Keeps it on top */
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem; /* Space between links */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #00d4ff; /* Hover effect for interactivity */
+}.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1600x900/?tech'); /* Free random image; replace with your own */
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 150px 20px; /* Tall for impact */
+}
+
+.hero h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #00d4ff;
+  color: #000;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: all 0.3s; /* Smooth hover */
+}
+
+.btn:hover {
+  background: #00aaff;
+  transform: translateY(-3px); /* Lift effect */
+}.section {
+  padding: 80px 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.skills .skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Auto-responsive columns */
+  gap: 1.5rem;
+}
+
+.skill-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Subtle shadow */
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px); /* Hover lift */
+}
+
+/* Form Styles */
+form {
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero {
+    padding: 100px 20px;
+  }
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+}nav a.active {
+  color: #00d4ff;          /* Cyan to match your button */
+  border-bottom: 2px solid #00d4ff;
+  padding-bottom: 5px;
+}
+
+nav a:hover {
+  color: #00d4ff;
+}
+
+/* Make sure sections have enough top padding under sticky header */
+.section {
+  padding: 100px 0 80px;   /* Extra top space */
+}
